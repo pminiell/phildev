@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import data from "../data";
 
 const Projects = () => {
+    // eslint-disable-next-line
   const [items, setItems] = useState(data)
   
   return (
@@ -18,7 +19,7 @@ const Projects = () => {
           ) 
         })}
       </section>
-    </>
+    </>s
   );
 };
 
