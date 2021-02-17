@@ -19,7 +19,7 @@ const Projects = () => {
           ) 
         })}
       </section>
-    </>s
+    </>
   );
 };
 
