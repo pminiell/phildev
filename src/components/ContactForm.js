@@ -14,6 +14,12 @@ const ContactSchema = Yup.object().shape({
     .required("Required"),
 });
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 const ContactForm = () => (
   <section className="showcase">
     <div className="overlay flex flex-col items-center justify-center">
@@ -31,13 +37,31 @@ const ContactForm = () => (
             message: "",
           }}
           validationSchema={ContactSchema}
-          onSubmit={(values, actions) => {
-            alert(JSON.stringify(values, null, 2));
-            actions.setSubmitting(false);
+          onSubmit={(values, { setSubmitting }) => {
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: encode({
+                "form-name": "contact",
+                ...values,
+              }),
+            })
+              .then(() => {
+                alert("Success!");
+                setSubmitting(false);
+              })
+              .catch((error) => {
+                console.error(error);
+                setSubmitting(false);
+              });
           }}
         >
-          {({ errors, touched, validateForm, isSubmitting }) => (
-            <Form className="flex flex-col w-300" action="POST">
+          {({ errors, touched, validateForm, isSubmitting, handleSubmit }) => (
+            <Form
+              className="flex flex-col w-300"
+              action="POST"
+              onSubmit={handleSubmit}
+            >
               <input type="hidden" name="form-name" value="contact" />
               <label htmlFor="name">
                 Name:
@@ -47,6 +71,7 @@ const ContactForm = () => (
               </label>
               <Field
                 name="name"
+                type="text"
                 className="py-2 px-4 mb-5 rounded border-solid border-green-600 text-green-500 placeholder-green-400 font-semibold"
               />
 
@@ -58,6 +83,7 @@ const ContactForm = () => (
               </label>
               <Field
                 name="email"
+                type="text"
                 className="py-2 px-4 mb-5 rounded border-solid border-green-600 text-green-500 placeholder-green-400 font-semibold"
               />
 
@@ -70,6 +96,7 @@ const ContactForm = () => (
               <Field
                 name="message"
                 component="textarea"
+                rows="5"
                 className="py-2 px-4 mb-5 rounded border-solid border-green-600 text-green-500 placeholder-green-400 font-semibold"
               />
 
