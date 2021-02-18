@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
@@ -47,11 +48,11 @@ const ContactForm = () => (
               }),
             })
               .then(() => {
-                alert("Success!");
                 setSubmitting(false);
+                return <Redirect to="/" />;
               })
               .catch((error) => {
-                console.error(error);
+                alert(error);
                 setSubmitting(false);
               });
           }}
