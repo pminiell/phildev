@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
@@ -23,7 +24,7 @@ const encode = (data) => {
 const ContactForm = () => (
   <section className="showcase">
     <div className="overlay flex flex-col items-center justify-center">
-      <div className="bg-green-800 p-10 rounded-2xl">
+      <div className="bg-gray-600 p-10 rounded-2xl">
         <h2 className="text-white font-semibold mb-5 text-center text-xl">
           Contact Phil?!
         </h2>
@@ -48,7 +49,7 @@ const ContactForm = () => (
             })
               .then(() => {
                 setSubmitting(false);
-                alert('Succesfully submitted !')
+                alert("Succesfully submitted !");
                 resetForm();
               })
               .catch((error) => {
@@ -85,7 +86,7 @@ const ContactForm = () => (
               <Field
                 name="email"
                 type="text"
-                className="py-2 px-4 mb-5 rounded border-solid border-green-600 text-green-500 placeholder-green-400 font-semibold"
+                className="py-2 px-4 mb-5 rounded border-solid border-green-700 text-green-700 placeholder-green-600 font-semibold"
               />
 
               <label htmlFor="message">
@@ -98,7 +99,7 @@ const ContactForm = () => (
                 name="message"
                 component="textarea"
                 rows="5"
-                className="py-2 px-4 mb-5 rounded border-solid border-green-600 text-green-500 placeholder-green-400 font-semibold"
+                className="py-2 px-4 mb-5 rounded border-solid border-green-700 text-green-700 placeholder-green-600 font-semibold"
               />
 
               <button
@@ -109,6 +110,12 @@ const ContactForm = () => (
               >
                 Send
               </button>
+              <Link
+                to="/"
+                className="bg-green-700 text-white text-center font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-green-400 mt-2"
+              >
+                Cancel
+              </Link>
             </Form>
           )}
         </Formik>
