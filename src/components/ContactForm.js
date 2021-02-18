@@ -1,5 +1,4 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
@@ -38,7 +37,7 @@ const ContactForm = () => (
             message: "",
           }}
           validationSchema={ContactSchema}
-          onSubmit={(values, { setSubmitting }) => {
+          onSubmit={(values, { setSubmitting, resetForm }) => {
             fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -49,7 +48,8 @@ const ContactForm = () => (
             })
               .then(() => {
                 setSubmitting(false);
-                return <Redirect to="/" />;
+                alert('Succesfully submitted !')
+                resetForm();
               })
               .catch((error) => {
                 alert(error);
