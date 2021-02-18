@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from './components/Header';
 import Showcase from './components/Showcase';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
+import ContactForm from './components/ContactForm';
 
 const App = () => {
   return (
@@ -17,8 +17,8 @@ const App = () => {
         <Projects />
       </Route>
       <Route path="/contact">
-        <Contact />
-      </Route> 
+        <ContactForm />
+      </Route>  
     </Router>
   );
 };
