@@ -14,10 +14,10 @@ const Header = () => {
         <nav>
           <ul className="flex">
             <li className="mr-5">
-              <Link to="/">Home</Link>
+              <Link to="/" className="mr-5 bg-none p-1 px-4 rounded-full font-semibold transition-all hover:bg-black">Home</Link>
             </li>
             <li className="mr-5">
-              <Link to="/projects">Projects</Link>
+              <Link to="/projects" className="mr-5 bg-none p-1 px-4 rounded-full font-semibold transition-all hover:bg-black">Projects</Link>
             </li>
             <li>
               <Link to="/contact" className="mr-5 bg-gray-900 p-1 px-4 rounded-full font-semibold transition-all hover:bg-black">Contact</Link>

@@ -1,0 +1,34 @@
+Date : 2021-02-18 16:44:43
+Directory : c:\Users\minie\Documents\Coding\portfolio\src
+Total : 8 files,  291 codes, 1 comments, 34 blanks, all 326 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |          7 |        276 |          1 |         29 |        306 |
+| CSS        |          1 |         15 |          0 |          5 |         20 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                    | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                       |          8 |        291 |          1 |         34 |        326 |
+| components                                                              |          4 |        225 |          1 |         20 |        246 |
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\minie\Documents\Coding\portfolio\src\App.js                    | JavaScript |         23 |          0 |          4 |         27 |
+| c:\Users\minie\Documents\Coding\portfolio\src\components\ContactForm.js | JavaScript |        120 |          0 |          8 |        128 |
+| c:\Users\minie\Documents\Coding\portfolio\src\components\Header.js      | JavaScript |         29 |          0 |          4 |         33 |
+| c:\Users\minie\Documents\Coding\portfolio\src\components\Projects.js    | JavaScript |         21 |          1 |          5 |         27 |
+| c:\Users\minie\Documents\Coding\portfolio\src\components\Showcase.js    | JavaScript |         55 |          0 |          3 |         58 |
+| c:\Users\minie\Documents\Coding\portfolio\src\data.js                   | JavaScript |         18 |          0 |          2 |         20 |
+| c:\Users\minie\Documents\Coding\portfolio\src\index.css                 | CSS        |         15 |          0 |          5 |         20 |
+| c:\Users\minie\Documents\Coding\portfolio\src\index.js                  | JavaScript |         10 |          0 |          3 |         13 |
+| Total                                                                   |            |        291 |          1 |         34 |        326 |
++-------------------------------------------------------------------------+------------+------------+------------+------------+------------+
