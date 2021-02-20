@@ -5,7 +5,7 @@ import { FaHtml5, FaJsSquare, FaCss3, FaNode, FaReact } from "react-icons/fa";
 const Showcase = () => {
   return (
     <>
-      <section className="showcase">
+      <section className="showcase min-h-0 md:min-h-screen ">
         <div className="w-4/6 m-auto overlay flex flex-col items-center justify-center text-white px-5">
           <h1 className="lg:text-5xl text-2xl font-semibold mb-10 text-center">
             Philip Minielly is a
