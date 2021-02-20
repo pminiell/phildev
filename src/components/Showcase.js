@@ -19,14 +19,22 @@ const Showcase = () => {
               opportunities .{" "}
             </span>
           </h1>
-          <h1 className="lg:text-5xl text-2xl font-semibold mb-10 text-center">
+          <h2 className="lg:text-4xl text-2xl font-semibold mb-10 text-center">
+            My goal is to utilize the 
+            <span className="text-gray-900 text-3xl lg:text-6xl font-extrabold">
+              {" "}
+              MERN STACK
+            </span>{" "}
+            to develop full stack web applications that solve real world problems.
+          </h2>
+          <h3 className="lg:text-3xl text-2xl font-semibold mb-10 text-center">
             I'm confident
             <span className="text-gray-900 text-3xl lg:text-6xl font-extrabold">
               {" "}
               my skills and work ethic
             </span>{" "}
             will make me an asset to any team or project.
-          </h1>
+          </h3>
           <div className="w-3/6 flex flex-row justify-evenly">
             <FaHtml5 size={56} color="#F16529" />
             <FaCss3 size={56} color="#3C99DC" />
