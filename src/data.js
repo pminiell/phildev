@@ -3,7 +3,7 @@ const data = [
     id: 1,
     path: "./images/profile-cropped.jpg",
     desc:
-      "I've spent a lot of time learning the fundamentals of web devlopment to get to the point where building a full-stack MERN app doesn't seem so daunting. I'm excited to continue to create. Keep an eye out to see what else I build as I continuie to learn as much as I can about modern day web applications",
+      "I've spent a lot of time learning the fundamentals of web devlopment to get to the point where building a full-stack MERN app doesn't seem so daunting. I'm excited to continue to create. Keep an eye out to see what else I build as I continue to learn as much as I can about modern day web applications",
   },
   {
     id: 2,
