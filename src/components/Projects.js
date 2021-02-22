@@ -8,7 +8,7 @@ const Projects = () => {
 
   return (
     <>
-      <section className="min-h-0 md:min-h-screen bg-gradient-to-b from-blue-600 to-gray-600 grid md:grid-cols-2 gap-5 sm:grid-cols-1 lg:grid-cols-3 pt-32">
+      <section className="min-h-0 md:min-h-screen bg-gradient-to-b from-blue-600 to-gray-600 grid md:grid-cols-2 gap-5 sm:grid-cols-1 lg:grid-cols-3 pt-16">
         {items.map((item) => {
           const { id, path, desc, link } = item;
           return (

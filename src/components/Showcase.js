@@ -5,57 +5,58 @@ import { FaHtml5, FaJsSquare, FaCss3, FaNode, FaReact } from "react-icons/fa";
 const Showcase = () => {
   return (
     <>
-      <section className="showcase min-h-0 md:min-h-screen ">
-        <div className="w-4/6 m-auto overlay flex flex-col items-center justify-center text-white px-5">
-          <h1 className="lg:text-5xl text-2xl font-semibold mb-10 text-center">
+      <section className="showcase">
+        <div className="w-4/5 m-auto pt-32 text-center">
+          <h1 className="text-white font-semibold text-2xl md:text-4xl">
             Philip Minielly is a
-            <span className="text-gray-900 text-3xl lg:text-6xl font-extrabold">
+            <span className="text-gray-100 font-extrabold text-3xl md:text-6xl">
               {" "}
               web developer
             </span>{" "}
             looking for new{" "}
-            <span className="text-gray-900 text-3xl lg:text-6xl font-extrabold">
+            <span className="text-gray-100 font-extrabold text-3xl md:text-6xl">
               {" "}
               opportunities .{" "}
             </span>
           </h1>
-          <h2 className="lg:text-4xl text-2xl font-semibold mb-10 text-center">
-            My goal is to utilize the 
-            <span className="text-gray-900 text-3xl lg:text-6xl font-extrabold">
+          <h2 className="text-white font-semibold text-2xl md:text-4xl mt-10">
+            My goal is to utilize the
+            <span className="text-gray-100 font-extrabold text-3xl md:text-6xl">
               {" "}
               MERN STACK
             </span>{" "}
-            to develop full stack web applications that solve real world problems.
+            to develop full stack web applications that solve real world
+            problems.
           </h2>
-          <h3 className="lg:text-3xl text-2xl font-semibold mb-10 text-center">
+          <h3 className="text-white font-semibold text-2xl md:text-4xl mt-10">
             I'm confident
-            <span className="text-gray-900 text-3xl lg:text-6xl font-extrabold">
+            <span className="text-gray-100 font-extrabold text-3xl md:text-6xl">
               {" "}
               my skills and work ethic
             </span>{" "}
             will make me an asset to any team or project.
           </h3>
-          <div className="w-3/6 flex flex-row justify-evenly">
-            <FaHtml5 size={56} color="#F16529" />
-            <FaCss3 size={56} color="#3C99DC" />
-            <FaJsSquare size={56} color="yellow"/>
-            <FaNode size={56} color="green" />
-            <FaReact size={56} color="#61DBFB"/>
-          </div>
-          <div className="mt-4 flex justify-center">
-            <Link
-              to="/contact"
-              className="mr-5 bg-gray-700 p-2 px-4 rounded-full font-semibold transition-all hover:bg-black"
-            >
-              Get in Touch
-            </Link>
-            <Link
-              to="/projects"
-              className="mr-5 bg-gray-700 p-2 px-4 rounded-full font-semibold transition-all hover:bg-black"
-            >
-              Projects
-            </Link>
-          </div>
+        </div>
+        <div className="w-3/6 m-auto flex flex-row justify-center p-5">
+          <FaHtml5 size={56} color="#F16529" />
+          <FaCss3 size={56} color="#3C99DC" />
+          <FaJsSquare size={56} color="yellow" />
+          <FaNode size={56} color="green" />
+          <FaReact size={56} color="#61DBFB" />
+        </div>
+        <div className="flex justify-center">
+          <Link
+            to="/contact"
+            className="mr-5 bg-gray-700 p-2 px-4 rounded-full font-semibold text-white transition-all hover:bg-black"
+          >
+            Get in Touch
+          </Link>
+          <Link
+            to="/projects"
+            className="mr-5 bg-gray-700 p-2 px-4 rounded-full font-semibold  text-white transition-all hover:bg-black"
+          >
+            Projects
+          </Link>
         </div>
       </section>
     </>
