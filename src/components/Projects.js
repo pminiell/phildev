@@ -12,16 +12,16 @@ const Projects = () => {
         {items.map((item) => {
           const { id, path, desc, link } = item;
           return (
-            <div className="flex flex-wrap justify-center">
+            <div className="flex flex-wrap justify-center ">
               <div key={id} className="w-124 px-4">
-                <a href={link} rel="noreferrer">
+                <a href={link} rel="noreferrer" target="_blank">
                   <img
                     src={path}
                     alt={desc}
                     className="shadow rounded max-w-full h-auto align-middle border-none opacity-80 hover:opacity-100"
                   />
                 </a>
-                <small className="block text-center text-white font-semibold text-lg">
+                <small className="block text-center text-white font-semibold text-xl lg:text-2xl">
                   {desc}
                 </small>
               </div>

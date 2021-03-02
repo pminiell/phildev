@@ -14,7 +14,7 @@ const Header = () => {
       <div className="container mx-auto mt-4 mb-4">
         <nav className="flex-row md:justify-between">
           <div className="logo">
-            <h2 className="text-3xl">
+            <h2 className="text-xl md:2xl lg:3xl ">
               <Link to="/">Philip Minielly - Web Developer</Link>
             </h2>
           </div>
@@ -25,7 +25,7 @@ const Header = () => {
             {isOpen && (
               <div>
                 {" "}
-                <ul className="bg-blue-500 flex-row p-5">
+                <ul className="flex-row p-5">
                   <li className="mt-2">
                     <Link
                       to="/"
