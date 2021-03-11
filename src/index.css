@@ -9,12 +9,3 @@
   font-family: 'Ultra', serif;
 }
 
-.showcase{
-  height: 100vh;
-  background: url('./assets/overlay.jpg') no-repeat center/cover;
-}
-
-.showcase .overlay{
-  height: 100vh;
-  background-color: rbga(0,0,0,0.9);
-}

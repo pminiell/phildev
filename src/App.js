@@ -20,7 +20,7 @@ const App = () => {
       <Route path="/contact">
         <ContactForm />
       </Route>
-    <Footer />
+      <Footer />
     </Router>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
@@ -22,106 +22,104 @@ const encode = (data) => {
 };
 
 const ContactForm = () => (
-  <section className="showcase">
-    <div className="overlay flex flex-col items-center justify-center">
-      <div className="bg-gray-600 p-10 rounded-2xl">
-        <h2 className="text-white font-semibold mb-5 text-center text-xl">
-          Contact Phil?!
-        </h2>
-        <p className="text-white font-semibold mb-5 text-center text-l">
-          Reach out at any time ! I'd love to get in touch!
-        </p>
-        <Formik
-          initialValues={{
-            name: "",
-            email: "",
-            message: "",
-          }}
-          validationSchema={ContactSchema}
-          onSubmit={(values, { setSubmitting, resetForm }) => {
-            fetch("/", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: encode({
-                "form-name": "contact",
-                ...values,
-              }),
+  <div className="bg-gradient-to-br from-indigo-700 via-green-200 to-indigo-900 h-vh flex flex-col items-center justify-center">
+    <div className="bg-green-100 border border-indigo-900 p-10 rounded-2xl m-10 shadow-lg">
+      <h2 className="text-indigo-900 font-semibold mb-5 text-center text-xl">
+        Contact Phil?!
+      </h2>
+      <p className="text-indigo-900 font-semibold mb-5 text-center text-l">
+        Reach out at any time ! I'd love to get in touch!
+      </p>
+      <Formik
+        initialValues={{
+          name: "",
+          email: "",
+          message: "",
+        }}
+        validationSchema={ContactSchema}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({
+              "form-name": "contact",
+              ...values,
+            }),
+          })
+            .then(() => {
+              setSubmitting(false);
+              alert("Succesfully submitted !");
+              resetForm();
             })
-              .then(() => {
-                setSubmitting(false);
-                alert("Succesfully submitted !");
-                resetForm();
-              })
-              .catch((error) => {
-                alert(error);
-                setSubmitting(false);
-              });
-          }}
-        >
-          {({ errors, touched, validateForm, isSubmitting, handleSubmit }) => (
-            <Form
-              className="flex flex-col w-300"
-              action="POST"
-              onSubmit={handleSubmit}
+            .catch((error) => {
+              alert(error);
+              setSubmitting(false);
+            });
+        }}
+      >
+        {({ errors, touched, validateForm, isSubmitting, handleSubmit }) => (
+          <Form
+            className="flex flex-col w-300"
+            action="POST"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <label htmlFor="name">
+              Name:
+              {errors.name && touched.name ? (
+                <div className="text-red-500">{errors.name}</div>
+              ) : null}
+            </label>
+            <Field
+              name="name"
+              type="text"
+              className="py-2 px-4 mb-5 rounded border border-indigo-900 text-indigo-900 placeholder-green-400 font-semibold"
+            />
+
+            <label htmlFor="email">
+              Email:{" "}
+              {errors.email && touched.email ? (
+                <div className="text-red-500">{errors.email}</div>
+              ) : null}
+            </label>
+            <Field
+              name="email"
+              type="text"
+              className="py-2 px-4 mb-5 rounded border border-indigo-900 text-indigo-900 placeholder-indigo-900 font-semibold"
+            />
+
+            <label htmlFor="message">
+              Message:
+              {errors.message && touched.message ? (
+                <div className="text-red-500">{errors.message}</div>
+              ) : null}{" "}
+            </label>
+            <Field
+              name="message"
+              component="textarea"
+              rows="5"
+              className="py-2 px-4 mb-5 rounded border border-indigo-900 text-indigo-900 placeholder-indigo-900 font-semibold"
+            />
+
+            <button
+              type="submit"
+              className="bg-indigo-900 text-white font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-green-400"
+              disabled={isSubmitting}
+              onClick={() => validateForm().then(() => console.log("blah"))}
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <label htmlFor="name">
-                Name:
-                {errors.name && touched.name ? (
-                  <div className="text-red-500">{errors.name}</div>
-                ) : null}
-              </label>
-              <Field
-                name="name"
-                type="text"
-                className="py-2 px-4 mb-5 rounded border-solid border-green-600 text-green-500 placeholder-green-400 font-semibold"
-              />
-
-              <label htmlFor="email">
-                Email:{" "}
-                {errors.email && touched.email ? (
-                  <div className="text-red-500">{errors.email}</div>
-                ) : null}
-              </label>
-              <Field
-                name="email"
-                type="text"
-                className="py-2 px-4 mb-5 rounded border-solid border-green-700 text-green-700 placeholder-green-600 font-semibold"
-              />
-
-              <label htmlFor="message">
-                Message:
-                {errors.message && touched.message ? (
-                  <div className="text-red-500">{errors.message}</div>
-                ) : null}{" "}
-              </label>
-              <Field
-                name="message"
-                component="textarea"
-                rows="5"
-                className="py-2 px-4 mb-5 rounded border-solid border-green-700 text-green-700 placeholder-green-600 font-semibold"
-              />
-
-              <button
-                type="submit"
-                className="bg-green-700 text-white font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-green-400"
-                disabled={isSubmitting}
-                onClick={() => validateForm().then(() => console.log("blah"))}
-              >
-                Send
-              </button>
-              <Link
-                to="/"
-                className="bg-green-700 text-white text-center font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-green-400 mt-2"
-              >
-                Cancel
-              </Link>
-            </Form>
-          )}
-        </Formik>
-      </div>
+              Send
+            </button>
+            <Link
+              to="/"
+              className="bg-indigo-900 text-white text-center font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-green-400 mt-2"
+            >
+              Cancel
+            </Link>
+          </Form>
+        )}
+      </Formik>
     </div>
-  </section>
+  </div>
 );
 
 export default ContactForm;

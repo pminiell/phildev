@@ -1,34 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 
 import data from "../data";
 
 const Projects = () => {
-  // eslint-disable-next-line
-  const [items, setItems] = useState(data);
-
   return (
     <>
-      <section className="min-h-0 md:min-h-screen bg-gradient-to-b from-blue-600 to-gray-600 grid md:grid-cols-2 gap-5 sm:grid-cols-1 lg:grid-cols-3 pt-16">
-        {items.map((item) => {
-          const { id, path, desc, link } = item;
-          return (
-            <div className="flex flex-wrap justify-center ">
-              <div key={id} className="w-124 px-4">
+      <div className="bg-gradient-to-br from-indigo-800 via-green-200 to-indigo-600 h-vh">
+        <div className="flex flex-col p-2 m-2 justify-center">
+          {data.map((item) => {
+            const { id, path, desc, link, title } = item;
+            return (
+              <div
+                key={id}
+                className="flex md:flex-row border border-indigo-900 bg-white rounded-md shadow-lg m-4"
+              >
                 <a href={link} rel="noreferrer" target="_blank">
                   <img
                     src={path}
-                    alt={desc}
-                    className="shadow rounded max-w-full h-auto align-middle border-none opacity-80 hover:opacity-100"
+                    alt={title}
+                    className="rounded-full justify-items-center border border-indigo-900 p-2 h-40 w-40 md:h-80 md:w-80 object-cover lg:opacity-90 lg:hover:opacity-100" 
                   />
                 </a>
-                <small className="block text-center text-white font-semibold text-xl lg:text-2xl">
-                  {desc}
-                </small>
+
+                <div className="grid grid-rows font-bold w-3/5 p-2 m-2">
+                  <h1 className="max-h-12 font-extrabold border text-center text-l text-indigo-900 md:text-2xl underline">
+                    {title}
+                  </h1>
+                  <div className="max-h-full font-bold border text-center text-m md:text-l text-indigo-900">
+                    {desc}
+                  </div>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </section>
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 };

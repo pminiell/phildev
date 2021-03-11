@@ -3,87 +3,70 @@ import { Link } from "react-router-dom";
 import { FaAlignJustify } from "react-icons/fa";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
+  const openDrawerHandler = () => {
+    setIsDrawerOpen((prev) => !prev);
   };
 
   return (
-    <>
-      <div className="container mx-auto mt-4 mb-4">
-        <nav className="flex-row md:justify-between">
-          <div className="logo">
-            <h2 className="text-xl md:2xl lg:3xl ">
-              <Link to="/">Philip Minielly - Web Developer</Link>
-            </h2>
-          </div>
-          <div className="md:hidden">
-            <button onClick={handleClick}>
-              <FaAlignJustify size={36} color="#F16529" />
+    <nav className="">
+      <div className="px-8 mx-auto border">
+        <div className="flex justify-center md:justify-between">
+          <div className="flex flex-col md:flex-row space-x-2 p-2 text-extrabold items-center">
+            <div>
+              <Link to="/" className="text-indigo-900 text-2xl font-extrabold">
+                Philip Minielly - Web Developer
+              </Link>
+            </div>
+            <button
+              className="flex font-bold p-4 md:hidden bg-indigo-400 rounded-lg text-white"
+              onClick={openDrawerHandler}
+            >
+              {isDrawerOpen ? (
+                "Close"
+              ) : (
+                <FaAlignJustify size={24} color="white" />
+              )}
             </button>
-            {isOpen && (
-              <div>
-                {" "}
-                <ul className="flex-row p-5">
-                  <li className="mt-2">
-                    <Link
-                      to="/"
-                      className="pr-5 bg-none p-1 px-4 rounded-full font-semibold transition-all hover:bg-blue-300"
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li className="mt-2">
-                    <Link
-                      to="/projects"
-                      className="pr-5 bg-none p-1 px-4 rounded-full font-semibold transition-all  hover:bg-blue-300"
-                    >
-                      Projects
-                    </Link>
-                  </li>
-                  <li className="mt-2">
-                    <Link
-                      to="/contact"
-                      className="pr-5 bg-green-700 p-1 px-4 rounded-full font-semibold transition-all  hover:bg-green-800"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
+            {isDrawerOpen ? (
+              <div className="flex flex-col mt-2 items-center bg-green md:hidden">
+                <Link className="flex font-bold" to="/">
+                  Home
+                </Link>
+                <Link to="/projects" className="flex font-bold">
+                  Projects
+                </Link>
+                <Link
+                  to="/contact"
+                  className="flex font-bold animate-pulse bg-indigo-400 p-1 rounded-md"
+                >
+                  Contact
+                </Link>
               </div>
+            ) : (
+              ""
             )}
           </div>
 
-          <ul className="hidden md:flex md:flex-row pt-5">
-            <li className="pr-5">
-              <Link
-                to="/"
-                className="pr-5 bg-none p-1 px-4 rounded-full font-semibold transition-all hover:bg-blue-300"
-              >
-                Home
-              </Link>
-            </li>
-            <li className="pr-5">
-              <Link
-                to="/projects"
-                className="pr-5 bg-none p-1 px-4 rounded-full font-semibold transition-all  hover:bg-blue-300"
-              >
+          <div className="hidden md:flex space-x-2 p-2 items-center">
+            <div className="rounded-md p-2 transition-all font-extrabold hover:bg-indigo-400">
+              <Link to="/" className="text-indigo-900">Home</Link>
+            </div>
+            <div className="rounded-md p-2 transition-all font-extrabold hover:bg-indigo-400">
+              <Link to="/projects" className="text-indigo-900">
                 Projects
               </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="pr-5 bg-green-700 p-1 px-4 rounded-full font-semibold transition-all  hover:bg-green-800"
-              >
+            </div>
+            <div className="rounded-md p-2 transition-all font-extrabold bg-indigo-900 hover:bg-indigo-400">
+              <Link to="/contact" className="text-white">
                 Contact
               </Link>
-            </li>
-          </ul>
-        </nav>
+            </div>
+          </div>
+        </div>
       </div>
-    </>
+    </nav>
   );
 };
 
