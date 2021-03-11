@@ -12,7 +12,7 @@ const data = [
     title: "This my Github",
     link: "https://github.com/pminiell",
     desc:
-      "This is my github. I'm trying to use git consistently in my workflow and push something everyday. You can see some of the other things I've been learnig through some projects I haven't deployed.",
+      "This is my github. I'm trying to use git consistently in my workflow and push something everyday. You can see some of the other things I've been learning through some projects I haven't deployed.",
   },
   {
     id: 3,
