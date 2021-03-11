@@ -17,7 +17,7 @@ const data = [
   {
     id: 3,
     path: "./images/cnmap.png",
-    title: "Full-Stack place tagging MERN app.",
+    title: "Full-Stack MERN app.",
     link: "https://tag-that-place.herokuapp.com/",
     desc:
       "This is a full-stack place tagging app built on the MERN stack. It uses an Express backend to make API calls to a MongoDB database. The front end is built on React with full authorization and authenticaiton.",
