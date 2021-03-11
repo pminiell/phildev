@@ -9,15 +9,15 @@ const data = [
   {
     id: 2,
     path: "./images/github.png",
-    title: "This my Github",
+    title: "This is my Github",
     link: "https://github.com/pminiell",
     desc:
-      "This is my github. I'm trying to use git consistently in my workflow and push something everyday. You can see some of the other things I've been learning through some projects I haven't deployed.",
+      "I'm trying to use git consistently in my workflow and push something everyday. You can see some of the other things I've been learning through some projects I haven't deployed.",
   },
   {
     id: 3,
     path: "./images/cnmap.png",
-    title: "Full-Stack MERN app.",
+    title: "Full-Stack MERN App",
     link: "https://tag-that-place.herokuapp.com/",
     desc:
       "This is a full-stack place tagging app built on the MERN stack. It uses an Express backend to make API calls to a MongoDB database. The front end is built on React with full authorization and authenticaiton.",
