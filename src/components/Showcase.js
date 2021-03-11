@@ -37,7 +37,7 @@ const Showcase = () => {
             </span>{" "}
             will make me an asset to any team or project.
           </h3>
-          <div className="w-3/6 m-auto flex flex-row justify-center p-4">
+          <div className="w-4/6 m-auto flex flex-row space-x-2 justify-center p-4">
             <FaHtml5 size={56} color="#F16529" />
             <FaCss3 size={56} color="#3C99DC" />
             <FaJsSquare size={56} color="yellow" />

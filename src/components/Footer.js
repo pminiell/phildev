@@ -3,8 +3,8 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-indigo-200 fixed inset-x-0 bottom-0">
-      <div className="w-4/6 m-auto space-x-4 flex justify-center">
+    <footer className="bg-white fixed inset-x-0 bottom-0">
+      <div className="space-x-4 flex justify-center">
         <a href="https://github.com/pminiell" rel="noreferrer noopener" target="_blank">
           <FaGithub size={24} color="#211F1F" />
         </a>

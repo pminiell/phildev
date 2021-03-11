@@ -22,7 +22,7 @@ const encode = (data) => {
 };
 
 const ContactForm = () => (
-  <div className="bg-gradient-to-br from-indigo-700 via-green-200 to-indigo-900 h-vh flex flex-col items-center justify-center">
+  <div className="bg-gradient-to-br from-indigo-700 via-green-200 to-indigo-900 h-screen flex flex-col items-center justify-center">
     <div className="bg-green-100 border border-indigo-900 p-10 rounded-2xl m-10 shadow-lg">
       <h2 className="text-indigo-900 font-semibold mb-5 text-center text-xl">
         Contact Phil?!
@@ -103,7 +103,7 @@ const ContactForm = () => (
 
             <button
               type="submit"
-              className="bg-indigo-900 text-white font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-green-400"
+              className="text-white font-bold tracking-wider py-2 rounded cursor-pointer transition-all  bg-indigo-900 hover:bg-indigo-400"
               disabled={isSubmitting}
               onClick={() => validateForm().then(() => console.log("blah"))}
             >
@@ -111,7 +111,7 @@ const ContactForm = () => (
             </button>
             <Link
               to="/"
-              className="bg-indigo-900 text-white text-center font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-green-400 mt-2"
+              className="text-white text-center font-bold tracking-wider py-2 rounded cursor-pointer transition-all bg-indigo-900 hover:bg-indigo-400 mt-2"
             >
               Cancel
             </Link>
