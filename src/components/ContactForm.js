@@ -22,8 +22,8 @@ const encode = (data) => {
 };
 
 const ContactForm = () => (
-  <div className="bg-gradient-to-br from-indigo-700 via-green-200 to-indigo-900 h-screen flex flex-col items-center justify-center">
-    <div className="bg-green-100 border border-indigo-900 p-10 rounded-2xl m-10 shadow-lg">
+  <div className="bg-gradient-to-br from-indigo-700 via-green-200 to-indigo-900 h-screen bg-fixed flex flex-col items-center justify-center">
+    <div className="bg-green-100 border border-indigo-900 p-4 md:p-10 rounded-2xl m-10 shadow-lg">
       <h2 className="text-indigo-900 font-semibold mb-5 text-center text-xl">
         Contact Phil?!
       </h2>

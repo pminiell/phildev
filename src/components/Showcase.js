@@ -6,7 +6,7 @@ import { FaCss3, FaHtml5, FaJsSquare, FaNode, FaReact} from 'react-icons/fa';
 const Showcase = () => {
   return (
     <>
-      <div className="bg-gradient-to-br from-indigo-800 via-green-200 to-indigo-600 h-screen">
+      <div className="bg-gradient-to-br from-indigo-800 via-green-200 to-indigo-600 h-screen md:h-vh lg:h-screen bg-scroll">
         <div className="w-3/4 m-auto pt-8 text-center">
           <h1 className="text-indigo-900 font-bold text-xl md:text-2xl lg:text-4xl">
             Philip Minielly is a

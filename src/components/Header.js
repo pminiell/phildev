@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <nav className="">
-      <div className="px-8 mx-auto border">
+      <div className="px-8 mx-auto">
         <div className="flex justify-center md:justify-between">
           <div className="flex flex-col md:flex-row space-x-2 p-2 text-extrabold items-center">
             <div>

@@ -5,7 +5,7 @@ import data from "../data";
 const Projects = () => {
   return (
     <>
-      <div className="bg-gradient-to-br from-indigo-800 via-green-200 to-indigo-600 h-screen">
+      <div className="bg-gradient-to-br from-indigo-800 via-green-200 to-indigo-600 h-full lg:h-vh">
         <div className="flex flex-col m-2 p-2 justify-center">
           {data.map((item) => {
             const { id, path, desc, link, title } = item;
