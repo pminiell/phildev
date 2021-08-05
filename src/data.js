@@ -3,6 +3,7 @@ const data = [
     id: 1,
     path: "./images/profile-cropped.jpg",
     title: "This Site",
+    link: "https://phildev.netlify.app/",
     desc:
       "This portfolio site was built using React and TailwindCSS. I used Formik for form building and validation and deployed using Netlify.",
   },
@@ -21,6 +22,14 @@ const data = [
     link: "https://tag-that-place.herokuapp.com/",
     desc:
       "This is a full-stack place tagging app built on the MERN stack. It uses an Express backend to make API calls to a MongoDB database. The front end is built on React with full authorization and authenticaiton.",
+  },
+  {
+    id: 4,
+    path: "./images/ezcharge.png",
+    title: "EasyCharge EV",
+    link: "https://easychargeev.com/",
+    desc:
+      "Using Gatsby with React and TailwindCSS I helped build a simple page for my friend and his sustainability company.",
   },
 ];
 
