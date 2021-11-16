@@ -23,7 +23,7 @@ const Projects = () => {
                 </a>
 
                 <div className="grid grid-rows font-bold w-3/5 p-2 m-2">
-                  <a href={link} rel="noreferrer" target="_blank" className="max-h-12 font-extrabold text-center text-l text-indigo-800 md:text-3xl underline hover:text-indigo-900">
+                  <a href={link} rel="noreferrer" target="_blank" className="max-h-12 font-extrabold text-center text-l text-indigo-800 md:text-3xl underline hover:text-indigo-600">
                     {title}
                   </a>
                   <div className="max-h-full font-semibold text-center text-sm md:text-2xl text-indigo-900">

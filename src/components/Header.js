@@ -20,7 +20,7 @@ const Header = () => {
               </Link>
             </div>
             <button
-              className="flex font-bold p-4 md:hidden bg-indigo-400 rounded-lg text-white"
+              className="flex font-bold mt-2 p-2 md:hidden bg-indigo-400 rounded-lg text-black hover:bg-indigo-900 hover:text-white"
               onClick={openDrawerHandler}
             >
               {isDrawerOpen ? (
@@ -30,16 +30,24 @@ const Header = () => {
               )}
             </button>
             {isDrawerOpen ? (
-              <div className="flex flex-col mt-2 items-center bg-green md:hidden">
+              <div className="flex flex-col mt-2 items-center bg-green md:hidden ">
                 <Link className="flex font-bold" to="/">
                   Home
                 </Link>
                 <Link to="/projects" className="flex font-bold">
                   Projects
                 </Link>
+                <a
+                  href="https://www.linkedin.com/pulse/philip-minielly-hirabledev-philip-minielly/?trackingId=dl8luhAAUccZuICShwIX2w%3D%3D"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  className="flex font-bold"
+                >
+                  About
+                </a>
                 <Link
                   to="/contact"
-                  className="flex font-bold animate-pulse bg-indigo-400 p-1 rounded-md"
+                  className="flex font-bold bg-indigo-400 p-1 rounded-md hover:bg-indigo-900 hover:text-white"
                 >
                   Contact
                 </Link>
@@ -51,11 +59,18 @@ const Header = () => {
 
           <div className="hidden md:flex space-x-2 p-2 items-center">
             <div className="rounded-md p-2 transition-all font-extrabold hover:bg-indigo-400">
-              <Link to="/" className="text-indigo-900">Home</Link>
+              <Link to="/" className="text-indigo-900">
+                Home
+              </Link>
             </div>
             <div className="rounded-md p-2 transition-all font-extrabold hover:bg-indigo-400">
               <Link to="/projects" className="text-indigo-900">
                 Projects
+              </Link>
+            </div>
+            <div className="rounded-md p-2 transition-all font-extrabold hover:bg-indigo-400">
+              <Link to="/projects" className="text-indigo-900">
+                About
               </Link>
             </div>
             <div className="rounded-md p-2 transition-all font-extrabold bg-indigo-900 hover:bg-indigo-400">
