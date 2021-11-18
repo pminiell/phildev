@@ -69,9 +69,14 @@ const Header = () => {
               </Link>
             </div>
             <div className="rounded-md p-2 transition-all font-extrabold hover:bg-indigo-400">
-              <Link to="/projects" className="text-indigo-900">
+              <a
+                href="https://www.linkedin.com/pulse/philip-minielly-hirabledev-philip-minielly/?trackingId=dl8luhAAUccZuICShwIX2w%3D%3D"
+                rel="noreferrer noopener"
+                target="_blank"
+                className="text-indigo-900"
+              >
                 About
-              </Link>
+              </a>
             </div>
             <div className="rounded-md p-2 transition-all font-extrabold bg-indigo-900 hover:bg-indigo-400">
               <Link to="/contact" className="text-white">
