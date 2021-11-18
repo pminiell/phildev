@@ -6,7 +6,7 @@ import data from "../data";
 const Showcase = () => {
   return (
     <>
-      <div className="bg-gradient-to-br from-indigo-800 via-green-200 to-indigo-900 h-screen md:h-vh lg:h-screen bg-scroll">
+      <div className="bg-gradient-to-br from-indigo-800 via-green-200 to-indigo-900 h-screen md:h-vh lg:h-screen bg-fixed">
         <div className="grid justify-items-center">
           <img
             src={data[0].path}
