@@ -7,16 +7,16 @@ const Showcase = () => {
   return (
     <>
       <div className="bg-gradient-to-br from-indigo-800 via-green-200 to-indigo-900 h-screen md:h-vh lg:h-screen bg-scroll">
-        <div className="grid justify-items-center m-4 p-2">
+        <div className="grid justify-items-center">
           <img
             src={data[0].path}
             alt={data[0].title}
-            className="rounded-full border border-indigo-900 h-36 w-36 md:h-80 md:w-80 object-cover "
+            className="rounded-full border border-indigo-900 h-36 w-36 md:h-80 md:w-80 object-cover m-4"
           />
           <h1 className="rounded-full justify-items-center lg:w-1/3 bg-indigo-900 text-white text-xl md:text-2xl lg:text-3xl text-center font-bold p-4 m-4">
             Hi , my name is Phil!
           </h1>
-          <h1 className="rounded-lg justify-items-center lg:w-1/3 bg-indigo-900 text-white text-l md:text-xl lg:text-2xl text-center p-4 m-4">
+          <h1 className="rounded-lg justify-items-center w-2/3 bg-indigo-900 text-white text-l md:text-xl lg:text-2xl text-center p-4 m-4">
             I'm a Web Developer looking for opportunities to learn and grow. To
             see some of the things I've built or to get in touch , click on the
             links below. The about link will take you to an article I wrote
